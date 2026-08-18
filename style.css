@@ -1,0 +1,141 @@
+dialog::backdrop{
+    background: black;
+}
+
+dialog{
+    border: none;
+    width: 15rem;
+    height: 21rem;
+
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{margin: 0;}
+
+.title{
+    margin: 0;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+.body{
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    gap: 2rem;
+}
+
+.name{
+    gap: 2rem;
+}
+
+.game{
+    gap: 1rem;
+}
+
+input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+    caret-color: white;
+    background-color: black;
+    padding-bottom: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input::placeholder{
+    color: white;
+    opacity: 40%;
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.input-wrapper::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.input-wrapper:focus-within::after{
+    transform: scaleX(1);
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#turn-label{
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    background-color: white;
+    border: none;
+    height: 1.8rem;
+    width: 6em;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#gameboard {
+    border: 1px solid white;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.4% 33.4% 33.4%;
+    margin-top: -0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.tile {
+    border: 1px solid white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.tile-hover{
+    background-color: rgb(20, 20, 20);
+}
+
+.win-tile{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

@@ -7,7 +7,58 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    
+    <dialog id="initial" class="modal">
+        <h1 class="title">TIC-TAC-TOE</h1>
+        <div class="menu body">
+            <p>Select game mode</p>
+            <div class="buttons">
+                <button id="pvc">1 Player</button>
+                <button id="pvp">2 Player</button>
+            </div>            
+        </div>
+    </dialog>
+
+    <dialog id="name">
+        <h1 class="title">TIC-TAC-TOE</h1>
+        <div class="name body">
+            <div class="inputs">
+                <div class="input-wrapper">
+                    <input type="text" id="name-one" placeholder="Enter player 1 name">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="name-two" placeholder="Enter player 2 name">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="name-confirm">Confirm</button>
+                <button id="name-back">Back</button>   
+            </div>         
+        </div>
+    </dialog>
+
+    <dialog id="game">
+        <h1 class="title">TIC-TAC-TOE</h1>
+
+        <div class="game body">
+            <p id="turn-label"></p>
+            <div id="gameboard">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            <div class="buttons">
+                <button id="restart">Restart</button>
+                <button id="new-game">Menu</button>            
+            </div>            
+        </div>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>
